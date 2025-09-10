@@ -13,23 +13,6 @@ import java.sql.SQLException;
  *   mediante commit() y rollback().
  * - Si la conexión se cierra o queda inválida por inactividad, la reabre automáticamente.
  *
- * Uso típico:
- * {@code
- *   ConnectionManager cm = ConnectionManager.getInstance();
- *   Connection con = cm.getConnection();
- *   try (var ps = con.prepareStatement("INSERT INTO ...")) {
- *       // ejecutar SQL...
- *       cm.commit();
- *   } catch (SQLException e) {
- *       cm.rollback();
- *       throw e;
- *   }
- * }
- *
- * Parámetros relevantes de la URL JDBC:
- * - useSSL=false: evita advertencias de certificado en desarrollo local.
- * - allowPublicKeyRetrieval=true: requerido por MySQL 8 cuando SSL está desactivado.
- * - serverTimezone=UTC: previene warnings de zona horaria.
  *
  */
 

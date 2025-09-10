@@ -32,6 +32,9 @@ public class SchemaMigrator {
         ConnectionManager cm= ConnectionManager.getInstance();
         Connection cn=cm.getConnection();
 
+        /**
+         * Sentencias SQL para crear las tablas: Cliente, Producto, Factura, Factura_Producto.
+         * Utilizo ENGINE=InnoDB para dejar claro el motor y tambien porque usamos autocommit=false y luego commit()/rollback() → esto solo funciona con InnoDB de la forma esperada. */
         try(Statement st = cn.createStatement()){
             st.executeUpdate(
                     "CREATE TABLE IF NOT EXISTS Cliente (" +
@@ -82,4 +85,37 @@ public class SchemaMigrator {
         }
 
     }
+
+    /**
+     * Vacía todas las tablas usando TRUNCATE en el orden correcto. Es un metodo auxiliar, lo uso para vaciar la DB para pruebas.
+     *
+     * Efectos:
+     * - Deshabilita FOREIGN_KEY_CHECKS, trunca Factura_Producto, Factura, Producto y Cliente,
+     *   y vuelve a habilitar FOREIGN_KEY_CHECKS.
+     * - TRUNCATE en MySQL hace commit implícito; no puede revertirse con rollback().
+     * - TRUNCATE reinicia los AUTO_INCREMENT de forma automática.
+     *
+     * Uso:
+     * - Llamar antes de importar CSV cuando se desea empezar desde una BD vacía.
+     *
+     * Errores:
+     * - Lanza RuntimeException si ocurre un error de acceso a la base de datos.
+     *
+     * @throws RuntimeException si falla alguna sentencia TRUNCATE o la comunicación con la BD
+     */
+    public void reset() {
+        Connection cn = ConnectionManager.getInstance().getConnection();
+        try (Statement st = cn.createStatement()) {
+            st.execute("SET FOREIGN_KEY_CHECKS=0");
+            st.executeUpdate("TRUNCATE TABLE Factura_Producto");
+            st.executeUpdate("TRUNCATE TABLE Factura");
+            st.executeUpdate("TRUNCATE TABLE Producto");
+            st.executeUpdate("TRUNCATE TABLE Cliente");
+            st.execute("SET FOREIGN_KEY_CHECKS=1");
+            System.out.println("Esquema vaciado (TRUNCATE).");
+        } catch (SQLException e) {
+            throw new RuntimeException("Error reseteando esquema (TRUNCATE)", e);
+        }
+    }
+
 }
