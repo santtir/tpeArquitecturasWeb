@@ -28,13 +28,13 @@ public class App {
         carRepo.alta(car);
 
 // ahora, matricular en 2023
-        System.out.println("estId=" + est.getId()); // deben imprimir valores != null
+        System.out.println("estId=" + est.getId());
         System.out.println("carId=" + car.getId());
         ecRepo.matricular(est.getId(), car.getId(), 2023);
 */
         CsvImporter importer = new CsvImporter(em, estRepo, carRepo);
 
-// IMPORTAR en este orden:
+// IMPORTAR
         importer.importarCarreras("data/carreras.csv");
         importer.importarEstudiantes("data/estudiantes.csv");
         importer.importarEstudianteCarrera("data/estudianteCarrera.csv");
