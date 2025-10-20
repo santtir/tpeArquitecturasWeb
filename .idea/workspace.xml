@@ -4,7 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc9c255f-4adb-48a1-b960-d02deb6f6bb6" name="Changes" comment="" />
+    <list default="true" id="bc9c255f-4adb-48a1-b960-d02deb6f6bb6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/controller/CarreraController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/controller/EstudianteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/controller/InscripcionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/controller/ReporteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/dto/CarreraConCantidadDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/dto/CarreraDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/dto/EstudianteDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/dto/InscripcionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/dto/ReporteCarreraAnualDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/importer/CsvImporter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/mapper/CarreraMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/mapper/EstudianteMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/mapper/InscripcionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/model/Carrera.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/model/Estudiante.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/model/Inscripcion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/repository/CarreraRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/repository/EstudianteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/repository/InscripcionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/service/CarreraService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/service/EstudianteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/service/ReporteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/service/impl/CarreraServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/service/impl/EstudianteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/service/impl/ReporteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/resources/data/carreras.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/resources/data/estudianteCarrera.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/resources/data/estudiantes.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +48,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -20,6 +56,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;santtir&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/santtir/tpeArquitecturasWeb&quot;,
+    &quot;accountId&quot;: &quot;84b8f749-d50b-41bd-95b8-cc4d2bb81192&quot;
+  }
+}</component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -34,15 +89,22 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #1.executor&quot;: &quot;Run&quot;,
     &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Entrega3Application.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Santi/IdeaProjects/tpeArquitecturasP2/src/main/resources/data&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Santi/IdeaProjects/tpeArquitecturasP2/entrega-3/src/main/resources/data&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -57,10 +119,24 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Santi\IdeaProjects\tpeArquitecturasP2\entrega-3\src\main\resources\data" />
       <recent name="C:\Users\Santi\IdeaProjects\tpeArquitecturasP2\src\main\resources\data" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunDashboard">
+    <option name="configurationStatuses">
+      <map>
+        <entry key="HttpClient.HttpRequestRunConfigurationType">
+          <value>
+            <map>
+              <entry key="generated-requests | #1" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Entrega3Application">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="tpeArquitecturasP2" />
@@ -74,8 +150,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" executionIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="Entrega3Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="entrega-3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.entrega_3.Entrega3Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #1" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
@@ -102,6 +189,12 @@
       <workItem from="1759857359620" duration="13232000" />
       <workItem from="1759947846708" duration="474000" />
       <workItem from="1759948350132" duration="149000" />
+      <workItem from="1759948695553" duration="556000" />
+      <workItem from="1760649227571" duration="1879000" />
+      <workItem from="1760729945327" duration="553000" />
+      <workItem from="1760970172237" duration="595000" />
+      <workItem from="1760971239517" duration="19641000" />
+      <workItem from="1760997133756" duration="3748000" />
     </task>
     <servers />
   </component>
