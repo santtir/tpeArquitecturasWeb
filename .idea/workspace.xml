@@ -5,39 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc9c255f-4adb-48a1-b960-d02deb6f6bb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/controller/CarreraController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/controller/EstudianteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/controller/InscripcionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/controller/ReporteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/dto/CarreraConCantidadDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/dto/CarreraDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/dto/EstudianteDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/dto/InscripcionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/dto/ReporteCarreraAnualDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/importer/CsvImporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/mapper/CarreraMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/mapper/EstudianteMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/mapper/InscripcionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/model/Carrera.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/model/Estudiante.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/model/Inscripcion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/repository/CarreraRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/repository/EstudianteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/repository/InscripcionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/service/CarreraService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/service/EstudianteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/service/ReporteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/service/impl/CarreraServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/service/impl/EstudianteServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/java/org/example/entrega_3/service/impl/ReporteServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/resources/data/carreras.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/resources/data/estudianteCarrera.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega-3/src/main/resources/data/estudiantes.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -194,7 +161,7 @@
       <workItem from="1760729945327" duration="553000" />
       <workItem from="1760970172237" duration="595000" />
       <workItem from="1760971239517" duration="19641000" />
-      <workItem from="1760997133756" duration="3748000" />
+      <workItem from="1760997133756" duration="5071000" />
     </task>
     <servers />
   </component>

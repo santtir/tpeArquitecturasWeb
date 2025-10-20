@@ -1,15 +1,9 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:awdb;DB_CLOSE_DELAY=-1
-    driverClassName: org.h2.Driver
-    username: sa
-    password:
+    url: jdbc:mysql://localhost:3306/awdb?useSSL=false&serverTimezone=UTC
+    username: appUser
+    password: app123
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
-  h2:
-    console:
-      enabled: true
-server:
-  port: 8080
+    show-sql: false
