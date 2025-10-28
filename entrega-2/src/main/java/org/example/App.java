@@ -1,62 +1,87 @@
 package org.example;
 
 import jakarta.persistence.EntityManager;
-import org.example.factory.JPAUtil;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 import org.example.modelo.Carrera;
 import org.example.modelo.Estudiante;
-import org.example.repository.CarreraRepository;
-import org.example.repository.EstudianteCarreraRepository;
-import org.example.repository.EstudianteRepository;
-import org.example.importer.CsvImporter;
-import org.example.repository.ReporteRepository;
+import org.example.repository.impl.CarreraRepositoryImpl;
+import org.example.repository.impl.EstudianteCarreraRepositoryImpl;
+import org.example.repository.impl.EstudianteRepositoryImpl;
+
+import java.util.List;
+import java.util.Optional;
 
 public class App {
     public static void main(String[] args) {
-        EntityManager em = JPAUtil.em();
-        EstudianteRepository estRepo = new EstudianteRepository(em);
-        CarreraRepository carRepo = new CarreraRepository(em);
-        EstudianteCarreraRepository ecRepo = new EstudianteCarreraRepository(em);
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("tpePU");
+        EntityManager em = emf.createEntityManager();
 
+        var estRepo = new EstudianteRepositoryImpl(em);
+        var carRepo = new CarreraRepositoryImpl(em);
+        var ecRepo  = new EstudianteCarreraRepositoryImpl(em);
 
-       /** Estudiante est = Estudiante.builder()
-                .nroLibreta("LU12221").nombres("Margarita").apellido("Diaz")
-                .edad(20).genero("F").documento("45.200.200").ciudadResidencia("Tandil")
-                .build();
-        estRepo.alta(est);
+        try {
+            // Carrera
+            var ingSistemas = new Carrera("Ing. en Sistemas");
+            em.getTransaction().begin();
+            em.persist(ingSistemas);
+            em.getTransaction().commit();
 
-        Carrera car = Carrera.builder().nombre("Ingenieria en Sistemas").build();
-        carRepo.alta(car);
+            // 2a) Alta estudiante
+            var e1 = Estudiante.builder()
+                    .nroLibreta("LU-001")
+                    .nombres("Ana")
+                    .apellido("Pérez")
+                    .edad(22)
+                    .genero("F")
+                    .documento("40111222")
+                    .ciudadResidencia("Tandil")
+                    .build();
+            estRepo.save(e1);
 
-// ahora, matricular en 2023
-        System.out.println("estId=" + est.getId());
-        System.out.println("carId=" + car.getId());
-        ecRepo.matricular(est.getId(), car.getId(), 2023);
-*/
-        CsvImporter importer = new CsvImporter(em, estRepo, carRepo);
+            var e2 = Estudiante.builder()
+                    .nroLibreta("LU-002")
+                    .nombres("Bruno")
+                    .apellido("García")
+                    .edad(24)
+                    .genero("M")
+                    .documento("38123456")
+                    .ciudadResidencia("Tandil")
+                    .build();
+            estRepo.save(e2);
 
-// IMPORTAR
-        importer.importarCarreras("data/carreras.csv");
-        importer.importarEstudiantes("data/estudiantes.csv");
-        importer.importarEstudianteCarrera("data/estudianteCarrera.csv");
+            // 2b) Matricular
+            ecRepo.matricular(e1.getId(), ingSistemas.getId(), 2023);
+            ecRepo.matricular(e2.getId(), ingSistemas.getId(), 2024);
 
-        // Reporte:
-        var repRepo = new ReporteRepository(em);
-        var resumen = repRepo.reporteCarrerasAnual();
+            // 2c) Listado orden simple
+            List<org.example.modelo.Estudiante> ordenados = estRepo.findAllOrdenadosPorApellido();
+            System.out.println("2c) Estudiantes ordenados: " + ordenados);
 
+            // 2d) Buscar por LU
+            Optional<org.example.modelo.Estudiante> porLU = estRepo.findByNroLibreta("LU-001");
+            System.out.println("2d) Por LU-001: " + porLU);
 
-// Mostrar (ordenado alfabético por carrera y cronológico por año)
-        System.out.println("Carrera;Año;Inscriptos;Egresados");
-        for (var r : resumen) {
-            System.out.printf("%s;%d;%d;%d%n",
-                    r.getNombreCarrera(), r.getAnio(),
-                    r.getInscriptos() == null ? 0 : r.getInscriptos(),
-                    r.getEgresados()  == null ? 0 : r.getEgresados()
-            );
+            // 2e) Por género
+            var mujeres = estRepo.findByGenero("F");
+            System.out.println("2e) Género F: " + mujeres);
+
+            // 2f) Carreras por cantidad de inscriptos (usa tu CarreraCantidadDTO)
+            var ranking = carRepo.carrerasOrdenadasPorCantidadDeInscriptos();
+            System.out.println("2f) Ranking carreras: " + ranking);
+
+            // 2g) Estudiantes de una carrera por ciudad
+            var deTandil = estRepo.estudiantesDeCarreraPorCiudad(ingSistemas.getId(), "Tandil");
+            System.out.println("2g) Estudiantes Ing. Sistemas en Tandil: " + deTandil);
+
+            // 3) Reporte anual (usa tu ResumenCarreraAnualDTO)
+            var reporte = ecRepo.reporteCarrerasAnual();
+            System.out.println("3) Reporte carreras anual: " + reporte);
+
+        } finally {
+            em.close();
+            emf.close();
         }
-
-        em.close();
-        JPAUtil.close();
-        System.out.println("CSV importados OK");
-
     }
 }
